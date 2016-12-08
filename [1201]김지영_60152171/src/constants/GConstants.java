@@ -4,6 +4,7 @@ import shapes.GShape;
 
 import java.awt.Cursor;
 
+import shapes.GEllipse;
 import shapes.GLine;
 import shapes.GPolygon;
 import shapes.GRectangle;
@@ -74,7 +75,7 @@ public class GConstants {
 	}
 	public static enum EToolBarButton {
 		rectangle("rsc/rectangle.gif", "rsc/rectangleSLT.gif", new GRectangle()),
-		ellipse("rsc/ellipse.gif", "rsc/ellipseSLT.gif", new GRectangle()),
+		ellipse("rsc/ellipse.gif", "rsc/ellipseSLT.gif", new GEllipse()),
 		line("rsc/line.gif", "rsc/lineSLT.gif", new GLine()),
 		polygon("rsc/polygon.gif", "rsc/polygonSLT.gif", new GPolygon());
 		
