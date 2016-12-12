@@ -36,23 +36,37 @@ public class GEllipse extends GShape {
 		}
 		switch (this.getCurrentEAnchor()) {
 		case NN:
+			this.ellipse.height = this.ellipse.height + this.ellipse.y-y;
+			this.ellipse.y = y;
 			break;
 		case NE:
+			this.ellipse.height = this.ellipse.height + this.ellipse.y-y;
+			this.ellipse.width = x - this.ellipse.x;
+			this.ellipse.y = y;
 			break;
 		case NW:
+			this.ellipse.height = this.ellipse.height + this.ellipse.y-y;
+			this.ellipse.width += this.ellipse.x-x;
+			this.ellipse.y = y;this.ellipse.x = x;
 			break;
 		case SS:
+			this.ellipse.height = y - this.ellipse.y;	
 			break;
 		case SE:
 			this.ellipse.width = x - this.ellipse.x;
-			this.ellipse.height = y - this.ellipse.y;				
+			this.ellipse.height = y - this.ellipse.y;	
 			break;
 		case SW:
+			this.ellipse.height = y- this.ellipse.y;
+			this.ellipse.width += this.ellipse.x-x;
+			this.ellipse.x = x;
 			break;
 		case EE:
+			this.ellipse.width =  x - this.ellipse.x;
 			break;
 		case WW:
-			break;
+			this.ellipse.width = this.ellipse.width + this.ellipse.x-x;
+			this.ellipse.x = x;
 		default:
 			break;
 		}
